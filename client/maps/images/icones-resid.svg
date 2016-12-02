@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="30" height="55">
+	<style type="text/css" >
+		<![CDATA[
+			.fond {
+			   fill:#ff740b;
+			   fill-opacity:1;
+			   fill-rule:evenodd;
+			   stroke:#1e1e1e;
+			   stroke-width:0.5;
+			   stroke-miterlimit:4;
+			   stroke-opacity:0.5;
+			   stroke-dasharray:none;
+			   stroke-linejoin:round
+			}
+			.blanc {
+			   fill:#ffffff;
+			   fill-opacity:1;
+			   fill-rule:evenodd;
+			   stroke:none
+			}
+		]]>
+	</style>
+    <g>
+		<path
+			d="m 29.75,15 C 29.75,32 15,33 15,54.75 C 15,33 0.25,32 0.25,15 C 0.25,7 7,0.25 15,0.25 C 23,0.25 29.75,7 29.75,15 z"
+			class="fond"
+		/>
+		<path
+			d="M 175,3.6237981 164.5625,9.7708834 165.39047,11.251202 175,5.5808293 184.60953,11.251202 185.4375,9.7708834 175,3.6237981 z m 0,3.1574519 -8.65625,5.09375 0,16.9375 17.3125,0 0,-16.9375 L 175,6.78125 z m -7.28125,5.78125 3.9375,0 0,4.75 -3.9375,0 0,-4.75 z m 5.3125,0 3.9375,0 0,4.75 -3.9375,0 0,-4.75 z m 5.3125,0 3.9375,0 0,4.75 -3.9375,0 0,-4.75 z m -10.625,7.8125 3.9375,0 0,4.75 -3.9375,0 0,-4.75 z m 5.3125,0 3.9375,0 0,4.75 -3.9375,0 0,-4.75 z m 5.3125,0 3.9375,0 0,4.75 -3.9375,0 0,-4.75 z"
+			class="blanc"
+			transform="translate(-160,0)"
+		/>
+    </g>
+</svg>

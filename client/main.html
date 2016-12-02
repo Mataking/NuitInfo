@@ -1,25 +1,105 @@
+
 <head>
-  <title>Nuitinfo</title>
+  <title>1 earth 4 all</title>
+
+  <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="main.css" />
+
+
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+    <script type='text/javascript' src='http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js?2'></script>
+    <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js'></script>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
-
+  <h1></h1>
+  {{>orienter}}
+  {{>occupe}}
+  {{>nourrir}}
+  {{>loger}}
+  {{>soigner}}
+  {{>reinserer}}
+  <button type="submit"> Se connecter</button>
+  <button type="submit"> S'inscrire</button>
   {{> hello}}
-  {{> info}}
+
+  <div id="map"> </div>
+
+	<script type='text/javascript' src='maps/states.js'></script>
+	 <script type='text/javascript' src='maps/points.js'></script>
+	 <script type='text/javascript' src='maps/points_admin.js'></script>
+	<script type='text/javascript' src='maps/points_logement.js'></script>
+	<script type='text/javascript' src='maps/points_soin.js'></script>
+	<script type='text/javascript' src='maps/points_autoroute.js'></script>
+	<script type='text/javascript' src='maps/points_repas.js'></script>
+    <script type='text/javascript' src='maps/leaf_fac.js'></script>
+	<script type='text/javascript' src='maps/test_regions.js'></script>
+
+
+
+
 </body>
 
 <template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<table style="width:100%; border:none" cellspacing="0">
+
+  <script>
+      var d = new Date();
+      var jour = d.getDate();
+      var mois = d.getMonth()+1;
+      var annee = d.getYear();
+      var heure = d.getHours();
+      var minute = d.getMinutes();
+     if (jour<10){
+     	jour = "0"+jour;
+      }
+     if (mois<10){
+     	jour = "0"+jour;
+    }
+    annee = 1900+annee;
+     var date = jour+"/"+mois+"/"+annee+" "+heure+":"+minute;
+      document.getElementById("demo").innerHTML = date;
+  </script>
+
+
+    <td width="18%" style="background-color:grey;color:#800000" valign="middle"><strong>Numéro d'urgence : 112</strong></td>
+    <td width="67%" style="background-color:grey;color:white"><marquee><p id="demo"></p>"Soupe populaire"</marquee></td>
+    <td width="15%" style="background-color:grey;color:white" valign="middle">
+            <div id="google_translate_element"></div><script type="text/javascript">
+              function googleTranslateElementInit() {
+                  new google.translate.TranslateElement({includedLanguages: 'ar,en,fr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+              }
+              </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    </td>
+    </table>
+
 </template>
 
-<template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
-  </ul>
-</template>
+ <template name="orienter">
+   <input class="image_orienter_input" type="submit" value=""/>
+ </template>
+
+ <template name="occupe">
+   <input class="image_occupe_input" type="submit"  value=""/>
+ </template>
+
+ <template name="nourrir">
+   <input class="image_nourrir_input" type="submit"  value=""/>
+ </template>
+
+ <template name="loger">
+   <input class="image_loger_input" type="submit"  value=""/>
+ </template>
+
+ <template name="soigner">
+   <input class="image_soigner_input" type="submit"  value=""/>
+ </template>
+
+ <template name="reinserer">
+   <input class="image_reinserer_input" type="submit"  value=""/>
+ </template>
